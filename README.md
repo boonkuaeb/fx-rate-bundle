@@ -6,13 +6,23 @@ your Symfony application.
 Install the package with:
 
 ```console
-composer require boonkuaeboonsutta/fx-rate-bundle --dev
+composer require boonkuaeboonsutta/fx-rate-bundle
 ```
 
-And... that's it! If you're *not* using Symfony Flex, you'll also
-need to enable the `BK\FxRateBundle\BKFxRateBundleBundle`
-in your `AppKernel.php` file.
+Create 'config/routes/bk_fx_rate.yml' file. A File contain as below
 
+    _bk_fx_rate:
+        resource: '@BKFxRateBundle/Resources/config/routes.xml'
+        prefix: /api/fxrate/
+
+    
+Create anathor file at 'config/packages/bk_fx_rate.yml'
+
+    bk_fx_rate :
+      endpoints : https://forex.1forge.com/1.0.3/convert
+      api_key : <YOUR API KEY>
+      
+   
 ## Usage
 
 This bundle provides a single service for connect to the FX Api, which
