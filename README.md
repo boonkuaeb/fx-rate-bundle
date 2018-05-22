@@ -1,4 +1,4 @@
-# Hello LoremIpsumBundle!
+# FxRateBundle
 
 FxRateBundle is a way for your user FX Rate API into
 your Symfony application.
