@@ -16,14 +16,23 @@
         "symfony/http-kernel": "^4.0",
         "guzzlehttp/guzzle": "^6.3"
     },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.0"
+    },
     "autoload": {
         "psr-4": {
             "BK\\FxRateBundle\\": "src/"
         }
     },
+
+    "autoload-dev": {
+        "psr-4": {
+            "BK\\BK\\Tests\\": "tests/"
+        }
+    },
+
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd"
         }
     }
 }
