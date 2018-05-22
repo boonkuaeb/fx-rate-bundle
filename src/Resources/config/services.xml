@@ -9,6 +9,10 @@
         <service  id="bk_fx_rate.bk_rate" class="BK\FxRateBundle\BKFxRate" public="true" />
         <service id="BK\FxRateBundle\BKFxRate" alias="bk_fx_rate.bk_rate" public="false" />
 
+
+        <service id="bk_fx_rate.controller.fx_rate_api_controller" class="BK\FxRateBundle\Controller\FxRateApiController" public="true">
+            <argument type="service" id="bk_fx_rate.bk_rate" />
+        </service>
     </services>
 
 </container>

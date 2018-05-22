@@ -21,7 +21,7 @@ class BKFxRate
     }
 
 
-    public function makeExchange($from_currency, $to_currency, $quantity, LoggerInterface $logger)
+    public function makeExchange($from_currency, $to_currency, $quantity)
     {
         $client = new Client();
         $params = [
@@ -31,16 +31,13 @@ class BKFxRate
             'api_key' => $this->apiKey
         ];
 
-        $logger->info('params', $params);
 
         $url_endpoint = $this->endPoints . '?' . http_build_query($params);
 
-        $logger->info("api call url", [$url_endpoint]);
 
         $res = $client->request('GET', $url_endpoint);
         $data = $res->getBody();
         $data_array = json_decode($data, true);
-        $logger->info('response from api', $data_array);
 
         return $data_array;
     }
