@@ -1,6 +1,6 @@
 # FxRateBundle
 
-FxRateBundle is a way for your user FX Rate API into
+FxRateBundle is a way for connect to FX Rate API into
 your Symfony application.
 
 Install the package with:
